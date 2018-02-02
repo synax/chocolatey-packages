@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubernetes-helm</id>
-    <version>{{PackageVersion}}</version>
-    <packageSourceUrl>https://github.com/synax/chocolatey-packages<packageSourceUrl>
+    <version>2.8.0</version>
+    <packageSourceUrl>https://github.com/synax/chocolatey-packages</packageSourceUrl>
     <owners>Stefan Henseler</owners>
     <title>helm</title>
     <authors>Helm is supported by and built with a community of over 250 developers</authors>
