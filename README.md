@@ -6,7 +6,7 @@
 
 This contains Chocolatey packages, both manually and automatically maintained.
 
-You can choose to use one or both of the different methods currently supported in the Chocolatey community for automatic packaging. They are AU (Automatic Updater) and Ketarin/ChocolateyPackageUpdater.
+You can choose to use one or both of the different methods currently supported in the Chocolatey community for automatic packaging. They are AU (Automatic Updater) and Ketarin/ChocolateyPackageUpdater. This repo only uses AU.
 
 ### Folder Structure
 
