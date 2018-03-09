@@ -13,8 +13,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
-    
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
+    $download_page = Invoke-WebRequest -Uri $releases 
 
     #tidy-5.1.25-win64.zip
     $re  = "helm-.+windows-amd(32|64).tar.gz"
@@ -30,4 +30,4 @@ function global:au_GetLatest {
     return $Latest
 } 
 
-Update-Package -ChecksumFor 64
+Update-Package -ChecksumFor 64 -Verbose
