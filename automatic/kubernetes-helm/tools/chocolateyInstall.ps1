@@ -1,7 +1,7 @@
 ﻿$packageName    = 'helm'
-$packageVersion = '2.8.0'
-$url64          = 'https://storage.googleapis.com/kubernetes-helm/helm-v2.8.0-windows-amd64.tar.gz'
-$checksum64     = 'c84d880680de4be85c6d52b1c394a6113e8d7da52e058de46cffcf88728291bf'
+$packageVersion = '2.8.1'
+$url64          = 'https://storage.googleapis.com/kubernetes-helm/helm-v2.8.1-windows-amd64.zip'
+$checksum64     = '8fbc9e425eb5f806b7f562a03ed03e12fad702a8ce7fc52b7b3409522f33c4f9'
 $checksumType64 = 'sha256'
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
