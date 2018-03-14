@@ -1,4 +1,4 @@
-﻿$packageArgs = @{
+$packageArgs = @{
     $packageName    = 'helm'
     #$packageVersion = '2.8.1'
     $url64          = 'https://storage.googleapis.com/kubernetes-helm/helm-v2.8.1-windows-amd64.zip'
@@ -7,7 +7,6 @@
     $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
     $tempDir    = "$toolsDir\temp"
 }
-
 
 # Download and unzip into a temp folder
 Install-ChocolateyZipPackage @packageArgs
