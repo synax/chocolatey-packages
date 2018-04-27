@@ -16,8 +16,8 @@ function global:au_GetLatest {
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
     $download_page = Invoke-WebRequest -Uri $releases 
 
-    $re  = "helm-.+windows-amd(64).tar.gz"
-    $url = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
+    $re  = "helm-.+windows-amd64.(tar.gz|zip)"
+    $url = $download_page.links | Where-Object href -match $re, | Select-Object -First 1 -expand href
 
     $version = ($url -split '-' | Select-Object -Last 3 | Select-Object -First 1).TrimStart('v')
 
