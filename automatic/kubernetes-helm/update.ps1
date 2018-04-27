@@ -7,7 +7,8 @@ function global:au_SearchReplace {
         'tools\chocolateyInstall.ps1' = @{
             "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
             "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-            "(^[$]packageVersion\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
+            "(^[$]checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+            #"(^[$]packageVersion\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
         }
      }
 }
@@ -21,10 +22,10 @@ function global:au_GetLatest {
 
     $version = ($url -split '-' | Select-Object -Last 3 | Select-Object -First 1).TrimStart('v')
 
-    $content = Invoke-WebRequest $url | Select-Object -ExpandProperty Content
-    $checksum = Get-FileHash -Algorithm SHA256 -InputStream ([System.IO.MemoryStream]::New($Content))
+   # $content = Invoke-WebRequest $url | Select-Object -ExpandProperty Content
+  #  $checksum = Get-FileHash -Algorithm SHA256 -InputStream ([System.IO.MemoryStream]::New($Content))
 
-    $Latest = @{ URL64 = $url; Checksum64 = $checksum.Hash.ToLower(); Version = $version }
+    $Latest = @{ URL64 = $url; Version = $version } # Checksum64 = $checksum.Hash.ToLower()
 
     return $Latest
 } 
