@@ -17,7 +17,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases 
 
     $re  = "helm-.+windows-amd64.(tar.gz|zip)"
-    $url = $download_page.links | Where-Object href -match $re, | Select-Object -First 1 -expand href
+    $url = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
 
     $version = ($url -split '-' | Select-Object -Last 3 | Select-Object -First 1).TrimStart('v')
 
