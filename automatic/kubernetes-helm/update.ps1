@@ -1,13 +1,13 @@
-import-module au
+import-module au -Force
 
 $releases = 'https://github.com/kubernetes/helm/releases'
 
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-            "(^[$]packageVersion\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
+            "(^\s*[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
+            "(^\s*[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+            "(^\s*[$]packageVersion\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
         }
      }
 }
@@ -23,10 +23,11 @@ function global:au_GetLatest {
 
     $content = Invoke-WebRequest $url | Select-Object -ExpandProperty Content
     $checksum = Get-FileHash -Algorithm SHA256 -InputStream ([System.IO.MemoryStream]::New($Content))
+    $checksum64 = $checksum.Hash.ToLower()
 
-    $Latest = @{ URL64 = $url; Version = $version ; Checksum64 = $checksum.Hash.ToLower()}
+    $Latest = @{ URL64 = "$url"; Version = $version; Checksum64 = $checksum64}
 
     return $Latest
 } 
 
-Update-Package -Verbose 
+Update-Package -ChecksumFor none -Verbose 
