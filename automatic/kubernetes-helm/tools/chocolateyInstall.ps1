@@ -1,5 +1,4 @@
 ﻿
-
 $packageName = 'kubernetes-helm'
 $toolsDir =  "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $tempDir = "$toolsDir\temp"
