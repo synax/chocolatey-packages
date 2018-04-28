@@ -5,8 +5,8 @@ $releases = 'https://github.com/kubernetes/helm/releases'
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
-            "(^\s*[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^\s*[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+            "(^\s*Url64bit\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
+            "(^\s*Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
      }
 }
@@ -29,4 +29,4 @@ function global:au_GetLatest {
     return $Latest
 } 
 
-Update-Package -ChecksumFor none -Verbose 
+Update-Package -ChecksumFor none -Verbose -NoCheckChocoVersion
