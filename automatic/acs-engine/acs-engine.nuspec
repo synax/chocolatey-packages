@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>acs-engine</id>
+    <version>0.16.1.20180501</version>
+    <packageSourceUrl>https://github.com/synax/chocolatey-packages</packageSourceUrl>
+    <owners>Stefan Henseler</owners>
+    <title>acs-engine</title>
+    <authors>Microsoft Azure Container Service Engine is supported by and built with a community of over 140 developers</authors>
+    <projectUrl>https://github.com/Azure/acs-engine</projectUrl>  
+    <iconUrl>https://raw.githubusercontent.com/synax/chocolatey-packages/master/icons/acs-engine.jpg</iconUrl> 
+    <docsUrl>https://github.com/Azure/acs-engine/blob/master/docs/README.md</docsUrl>
+    <copyright>(c) 2017 acs-engine</copyright>
+    <licenseUrl>https://github.com/Azure/acs-engine/blob/master/LICENSE</licenseUrl>
+    <bugTrackerUrl>https://github.com/Azure/acs-engine/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/Azure/acs-engine</projectSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>kubernetes azure container acs-engine</tags>
+    <summary>Azure Container Service Engine - a place for community to collaborate and build the best open Docker container infrastructure for Azure.</summary>
+    <description>The Azure Container Service Engine (acs-engine) generates ARM (Azure Resource Manager) templates for Docker enabled clusters on Microsoft Azure with your choice of DC/OS, Kubernetes, Swarm Mode, or Swarm orchestrators. The input to the tool is a cluster definition. The cluster definition is very similar to (in many cases the same as) the ARM template syntax used to deploy a Microsoft Azure Container Service cluster.</description>
+    <releaseNotes>https://github.com/Azure/acs-engine/releases</releaseNotes>
+  </metadata>
+  <files>
+       <file src="tools\**" target="tools" />
+  </files>
+</package>
