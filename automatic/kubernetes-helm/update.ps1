@@ -29,4 +29,4 @@ function global:au_GetLatest {
     return $Latest
 } 
 
-Update-Package -ChecksumFor none -Verbose -NoCheckChocoVersion -Force
+Update-Package -ChecksumFor none -Verbose
