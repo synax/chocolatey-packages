@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ksonnet</id>
+    <version>0.1.0</version>
+    <packageSourceUrl>https://github.com/synax/chocolatey-packages</packageSourceUrl>
+    <owners>Stefan Henseler</owners>
+    <title>ksonnet</title>
+    <authors>Ksonnet is supported by and built with a community of over 250 developers</authors>
+    <projectUrl>https://ksonnet.io</projectUrl>  
+    <iconUrl>https://raw.githubusercontent.com/synax/chocolatey-packages/master/icons/ksonnet.jpg</iconUrl> 
+    <docsUrl>https://ksonnet.io/docs/concepts/</docsUrl>
+    <copyright>(c) 2017 Helm</copyright>
+    <licenseUrl>https://github.com/ksonnet/ksonnet/blob/master/LICENSE</licenseUrl>
+    <bugTrackerUrl>https://github.com/ksonnet/ksonnet/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/ksonnet/ksonnet</projectSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>kubernetes jsonnet ksonnet configuration</tags>
+    <summary>A CLI-supported framework that streamlines writing and deployment of Kubernetes configurations to multiple clusters.</summary>
+    <description>ksonnet is a framework for writing, sharing, and deploying Kubernetes application manifests. With its CLI, you can generate a complete application from scratch in only a few commands, or manage a complex system at scale.</description>
+    <releaseNotes>https://github.com/ksonnet/ksonnet/releases</releaseNotes>
+  </metadata>
+  <files>
+       <file src="tools\**" target="tools" />
+  </files>
+</package>
