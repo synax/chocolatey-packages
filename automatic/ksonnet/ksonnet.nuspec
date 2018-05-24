@@ -2,7 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ksonnet</id>
+<<<<<<< HEAD
     <version>0.10.0</version>
+=======
+    <version>0.10.2</version>
+>>>>>>> efccc81247caed2b3e8f89d35793f443ccbb2056
     <packageSourceUrl>https://github.com/synax/chocolatey-packages</packageSourceUrl>
     <owners>Stefan Henseler</owners>
     <title>ksonnet</title>
