@@ -2,15 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ksonnet</id>
-    <version>0.1.0</version>
+    <version>0.10.0</version>
     <packageSourceUrl>https://github.com/synax/chocolatey-packages</packageSourceUrl>
     <owners>Stefan Henseler</owners>
     <title>ksonnet</title>
-    <authors>Ksonnet is supported by and built with a community of over 250 developers</authors>
+    <authors>Ksonnet is supported by and built with a community of over 18 developers</authors>
     <projectUrl>https://ksonnet.io</projectUrl>  
     <iconUrl>https://raw.githubusercontent.com/synax/chocolatey-packages/master/icons/ksonnet.jpg</iconUrl> 
     <docsUrl>https://ksonnet.io/docs/concepts/</docsUrl>
-    <copyright>(c) 2017 Helm</copyright>
+    <copyright>(c) 2017 ksonnet</copyright>
     <licenseUrl>https://github.com/ksonnet/ksonnet/blob/master/LICENSE</licenseUrl>
     <bugTrackerUrl>https://github.com/ksonnet/ksonnet/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/ksonnet/ksonnet</projectSourceUrl>
