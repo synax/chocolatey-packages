@@ -13,15 +13,15 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    #[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
-    $download_page = Invoke-WebRequest -Uri $releases 
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re  = "acs-engine-.+windows-amd64.zip"
     $url = $github + $($download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href)
 
     $version = ($url -split '-' | Select-Object -Last 3 | Select-Object -First 1).TrimStart('v')
 
-    $content = Invoke-WebRequest $url | Select-Object -ExpandProperty Content
+    $content = Invoke-WebRequest $url -UseBasicParsing  | Select-Object -ExpandProperty Content
     $checksum = Get-FileHash -Algorithm SHA256 -InputStream ([System.IO.MemoryStream]::New($Content))
     $checksum64 = $checksum.Hash.ToLower()
 
