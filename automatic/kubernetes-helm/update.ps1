@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $re  = "helm-.+windows-amd64.(tar.gz|zip)"
     $url = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
 
-    $version = ($url -split '-' | Select-Object -Last 3 | Select-Object -First 1).TrimStart('v')
+    $version = ($url.Replace("-rc.",".rc.")  -split '-' | Select-Object -Last 3 | Select-Object -First 1).TrimStart('v')
 
     $content = Invoke-WebRequest $url -UseBasicParsing | Select-Object -ExpandProperty Content
     $checksum = Get-FileHash -Algorithm SHA256 -InputStream ([System.IO.MemoryStream]::New($Content))
