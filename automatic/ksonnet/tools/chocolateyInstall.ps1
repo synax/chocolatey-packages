@@ -5,8 +5,8 @@ $tempDir = "$toolsDir\temp"
 
 $packageArgs = @{
     PackageName    = $packageName
-    Url64bit       = 'https://github.com/ksonnet/ksonnet/releases/download/v0.13.0/ks_0.13.0_windows_amd64.zip'
-    Checksum64     = '3bf9af50f15951aa96677d6aa211e779d5d67807b0773ec1c2b2ad61eb545b68'
+    Url64bit       = 'https://github.com/ksonnet/ksonnet/releases/download/v0.13.1/ks_0.13.1_windows_amd64.zip'
+    Checksum64     = 'ca76063a2819ade0c4e2749c59fb92cfd7210d1c1196e7b4c20b0f4b4bd2bebc'
     ChecksumType64 = 'sha256'
     UnzipLocation  = $toolsDir
 }
