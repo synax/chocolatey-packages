@@ -13,6 +13,7 @@
 *.new
 *.exist
 *-orig.*
+*.hashcheck
 Thumbs.db
 .DS_Store
 _ReSharper*
