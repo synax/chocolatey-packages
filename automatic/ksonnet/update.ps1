@@ -13,6 +13,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+    $ProgressPreference = 'SilentlyContinue'
+    $hash_check_file_path = "$pwd/helm.hashcheck"
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
@@ -21,8 +23,9 @@ function global:au_GetLatest {
 
     $version = ($url -split '_' | Select-Object -Last 3 | Select-Object -First 1).TrimStart('v')
 
-    $content = Invoke-WebRequest $url -UseBasicParsing | Select-Object -ExpandProperty Content
-    $checksum = Get-FileHash -Algorithm SHA256 -InputStream ([System.IO.MemoryStream]::New($Content))
+    $wc = New-Object net.webclient
+    $wc.Downloadfile($url, $hash_check_file_path)
+    $checksum = Get-FileHash -Algorithm SHA256 -Path $hash_check_file_path #-InputStream ([System.IO.MemoryStream]::New($Content))
     $checksum64 = $checksum.Hash.ToLower()
 
     $Latest = @{ URL64 = "$url"; Version = $version; Checksum64 = $checksum64}
