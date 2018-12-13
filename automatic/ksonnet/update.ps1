@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $ProgressPreference = 'SilentlyContinue'
-    $hash_check_file_path = "$pwd/helm.hashcheck"
+    $hash_check_file_path = "$pwd/ksonnet.hashcheck"
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
