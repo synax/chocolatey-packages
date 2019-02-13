@@ -5,8 +5,8 @@ $tempDir = "$toolsDir\temp"
 
 $packageArgs = @{
     PackageName    = $packageName
-    Url64bit       = 'https://storage.googleapis.com/kubernetes-helm/helm-v2.12.2-windows-amd64.zip'
-    Checksum64     = 'c1911e3a531d48b845a239f6d6baa48154e86770b3c9fa0e4418efefac9d2061'
+    Url64bit       = 'https://storage.googleapis.com/kubernetes-helm/helm-v2.12.3-windows-amd64.zip'
+    Checksum64     = 'c01a9e7ad27d5dded85511f244201a4821fe7157f1edbf5b601cff78c55d06a2'
     ChecksumType64 = 'sha256'
     UnzipLocation  = $toolsDir
 }
