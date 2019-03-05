@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>aks-engine</id>
+    <version>0.31.3</version>
+    <packageSourceUrl>https://github.com/synax/chocolatey-packages</packageSourceUrl>
+    <owners>Stefan Henseler</owners>
+    <title>aks-engine</title>
+    <authors>Microsoft AKS Engine is supported by and built with a community of developers</authors>
+    <projectUrl>https://github.com/Azure/aks-engine</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/synax/chocolatey-packages/master/icons/acs-engine.jpg</iconUrl>
+    <docsUrl>https://github.com/Azure/aks-engine/blob/master/docs/README.md</docsUrl>
+    <copyright>(c) 2017 Microsoft Azure</copyright>
+    <licenseUrl>https://github.com/Azure/aks-engine/blob/master/LICENSE</licenseUrl>
+    <bugTrackerUrl>https://github.com/Azure/aks-engine/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/Azure/aks-engine</projectSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>kubernetes azure container aks-engine</tags>
+    <summary>Azure Kubernetes Engine - a place for community to collaborate and build the best open Kubernetes infrastructure for Azure.</summary>
+    <description>The Azure Kubernetes Engine (aks-engine) generates ARM (Azure Resource Manager) templates for Kubernetes clusters on Microsoft Azure.</description>
+    <releaseNotes>https://github.com/Azure/aks-engine/releases</releaseNotes>
+  </metadata>
+  <files>
+       <file src="tools\**" target="tools" />
+  </files>
+</package>
