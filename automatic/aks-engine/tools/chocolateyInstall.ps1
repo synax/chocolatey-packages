@@ -5,8 +5,8 @@ $tempDir = "$toolsDir\temp"
 
 $packageArgs = @{
     PackageName    = $packageName
-    Url64bit       = 'https://github.com/Azure/aks-engine/releases/download/v0.38.3/aks-engine-v0.38.3-windows-amd64.zip'
-    Checksum64     = '2d2c25b4264e461b3dccc90a6708079942f3b2651371c86eb6c898bb3f4303fd'
+    Url64bit       = 'https://github.com/Azure/aks-engine/releases/download/v0.38.4/aks-engine-v0.38.4-windows-amd64.zip'
+    Checksum64     = '60fc0a01422022604579b2cb3fd94a68dcee40dfa643ed0fd17b0f3608f7977b'
     ChecksumType64 = 'sha256'
     UnzipLocation  = $toolsDir
 }
