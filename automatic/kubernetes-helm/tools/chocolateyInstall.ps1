@@ -5,8 +5,8 @@ $tempDir = "$toolsDir\temp"
 
 $packageArgs = @{
     PackageName    = $packageName
-    Url64bit       = 'https://get.helm.sh/helm-v2.14.3-windows-amd64.zip'
-    Checksum64     = '42cd9ee605a6d7935b99ebaca4f21f93183baee44410344793c06099abd4b713'
+    Url64bit       = 'https://get.helm.sh/helm-v2.15.0-windows-amd64.zip'
+    Checksum64     = 'fa76beb2183dcb44efc60e53a67017dfa7c988762079c58aacea87b5da7a8819'
     ChecksumType64 = 'sha256'
     UnzipLocation  = $toolsDir
 }
