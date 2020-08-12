@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubernetes-helm</id>
-    <version>3.2.4</version>
+    <version>3.3.0</version>
     <packageSourceUrl>https://github.com/synax/chocolatey-packages</packageSourceUrl>
     <owners>Stefan Henseler</owners>
     <title>helm</title>
