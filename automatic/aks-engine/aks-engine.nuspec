@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>aks-engine</id>
-    <version>0.63.0</version>
+    <version>0.64.0</version>
     <packageSourceUrl>https://github.com/synax/chocolatey-packages</packageSourceUrl>
     <owners>Stefan Henseler</owners>
     <title>aks-engine</title>
